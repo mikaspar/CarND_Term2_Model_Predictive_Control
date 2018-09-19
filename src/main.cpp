@@ -92,12 +92,12 @@ int main()
 		  // Set the state vector + velocity + errors
           Eigen::VectorXd state(6);
           
-		  state << 0, 0, 0, v, cte, epsi;
+		  state << 0, 0, 0, v, cte, epsi; // x,y,psi =0 because they are in the vehicle coordinates now
 
           
-          // Include delay
+          // Include latency
 		  unsigned int delay = 100;
-          include_delay(state, delta, a, delay); 
+          predict_include_delay(state, delta, a, delay); 
 			
 		  MPC::MPC_Solution solved_mpc;
          

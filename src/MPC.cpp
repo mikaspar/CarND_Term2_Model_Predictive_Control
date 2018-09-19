@@ -82,6 +82,8 @@ class FG_eval
 
     // Constraints for the points t+1 => t+N fg[1+n_states+n_actuators+1...n_states*N+n_actuators*(N-1)]
 	
+	
+	
     for(unsigned int t = 1; t < N; t++) {
        // The state at time t.
 		  AD<double> x0 = vars[x_start + t - 1];

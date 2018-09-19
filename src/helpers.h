@@ -80,7 +80,7 @@ void map2veh(const double x_m, const double y_m, const double psi,const vector<d
 
 
 // Delay is considered in the model
-void include_delay(Eigen::VectorXd& state, const double delta, const double acc, unsigned int delay)
+void predict_include_delay(Eigen::VectorXd& state, const double delta, const double acc, unsigned int delay)
 {
   double x = state[0];
   double y = state[1];
