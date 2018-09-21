@@ -47,9 +47,10 @@ class FG_eval
     // fg[1] contains the initial states
     // fg[1+t] contains the values based on the predicted model
     const double f_e = 120; //factor multiplying heading error
-    const double f_d = 600; // factor multiplying usage of actuators ( only used for steering)
+    const double f_xy = 10; // factor multiplying the position error on the map
+	const double f_d = 600; // factor multiplying usage of actuators ( only used for steering)
     const double f_ddiff = 50000; // factor multiplying actuation changes between consecutive steps ( only used for steering)
-	const double f_xy = 10; // factor multiplying the position error on the map
+	
     
     // Cost based on the reference states: cte, epsi, and velocity.
     for(unsigned int t = 0; t < N; t++) {
