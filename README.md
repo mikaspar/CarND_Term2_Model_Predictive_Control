@@ -8,7 +8,8 @@ Self-Driving Car Engineer Nanodegree Program
 The model predicitve controller was implemented for the vehicle motion control in order to keep the vehicle on the desired trajectory.
 
 The model is based on kinematic bicycle model. 
-The state vector includes: 
+The state vector includes:
+
                            position x
                            position y
                            velocity
